@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Статус серверов OpsVPN - Uptime мониторинг</title>
+  <meta name="description" content="Проверьте статус серверов OpsVPN в реальном времени. Uptime 99.9%, мониторинг всех локаций и серверов VPN.">
+  <meta name="keywords" content="opsvpn статус, vpn uptime, статус серверов vpn, мониторинг vpn">
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://opsvpn.top/status/">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Статус серверов OpsVPN - Uptime мониторинг">
+  <meta property="og:description" content="Проверьте статус серверов OpsVPN в реальном времени. Uptime 99.9%.">
+  <meta property="og:url" content="https://opsvpn.top/status/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="OpsVPN">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  
+  <!-- Open Graph Image -->
+  <meta property="og:image" content="https://opsvpn.top/images/logo.webp">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="/images/logo.webp" alt="OpsVPN" class="logo-img">
+        <span>OpsVPN<sup class="tm">TM</sup></span>
+      </a>
+      
+      <nav class="nav">
+        <a href="/" class="nav-link">Главная</a>
+        <a href="/about/" class="nav-link">О сервисе</a>
+        <a href="/download/" class="nav-link">Скачать VPN</a>
+        <a href="/locations/" class="nav-link">Локации</a>
+        <a href="/status/" class="nav-link active">Статус</a>
+      </nav>
+      
+      <a href="https://t.me/opsvpnbot" class="btn btn-primary" target="_blank" rel="noopener">Подключить</a>
+      
+      <button class="mobile-menu-btn" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-title">Статус <span class="text-gradient">серверов</span></h1>
+        <p class="page-subtitle">Мониторинг работоспособности всех VPN серверов в реальном времени</p>
+      </div>
+    </section>
+
+    <!-- Overall Status -->
+    <section class="status-overview">
+      <div class="container">
+        <div class="status-card status-operational">
+          <div class="status-indicator"></div>
+          <div class="status-info">
+            <h2>Все системы работают</h2>
+            <p>Последнее обновление: <span id="last-update">сейчас</span></p>
+          </div>
+          <div class="status-uptime">
+            <span class="uptime-value">99.9%</span>
+            <span class="uptime-label">Uptime за 30 дней</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Server Status -->
+    <section class="server-status">
+      <div class="container">
+        <h2 class="section-title">Статус серверов</h2>
+        
+        <div class="status-grid">
+          <!-- Germany -->
+          <div class="status-item">
+            <div class="status-item-header">
+              <span class="status-dot operational"></span>
+              <h3>Германия (Франкфурт)</h3>
+            </div>
+            <div class="status-item-details">
+              <span class="status-label">Работает</span>
+              <span class="status-ping">12ms</span>
+            </div>
+            <div class="status-bar">
+              <div class="status-bar-fill" style="width: 100%"></div>
+            </div>
+          </div>
+
+          <!-- Netherlands -->
+          <div class="status-item">
+            <div class="status-item-header">
+              <span class="status-dot operational"></span>
+              <h3>Нидерланды (Амстердам)</h3>
+            </div>
+            <div class="status-item-details">
+              <span class="status-label">Работает</span>
+              <span class="status-ping">15ms</span>
+            </div>
+            <div class="status-bar">
+              <div class="status-bar-fill" style="width: 100%"></div>
+            </div>
+          </div>
+
+          <!-- Finland -->
+          <div class="status-item">
+            <div class="status-item-header">
+              <span class="status-dot operational"></span>
+              <h3>Финляндия (Хельсинки)</h3>
+            </div>
+            <div class="status-item-details">
+              <span class="status-label">Работает</span>
+              <span class="status-ping">18ms</span>
+            </div>
+            <div class="status-bar">
+              <div class="status-bar-fill" style="width: 100%"></div>
+            </div>
+          </div>
+
+          <!-- USA -->
+          <div class="status-item">
+            <div class="status-item-header">
+              <span class="status-dot operational"></span>
+              <h3>США (Нью-Йорк)</h3>
+            </div>
+            <div class="status-item-details">
+              <span class="status-label">Работает</span>
+              <span class="status-ping">85ms</span>
+            </div>
+            <div class="status-bar">
+              <div class="status-bar-fill" style="width: 100%"></div>
+            </div>
+          </div>
+
+          <!-- UK -->
+          <div class="status-item">
+            <div class="status-item-header">
+              <span class="status-dot operational"></span>
+              <h3>Великобритания (Лондон)</h3>
+            </div>
+            <div class="status-item-details">
+              <span class="status-label">Работает</span>
+              <span class="status-ping">22ms</span>
+            </div>
+            <div class="status-bar">
+              <div class="status-bar-fill" style="width: 100%"></div>
+            </div>
+          </div>
+
+          <!-- Singapore -->
+          <div class="status-item">
+            <div class="status-item-header">
+              <span class="status-dot operational"></span>
+              <h3>Сингапур</h3>
+            </div>
+            <div class="status-item-details">
+              <span class="status-label">Работает</span>
+              <span class="status-ping">120ms</span>
+            </div>
+            <div class="status-bar">
+              <div class="status-bar-fill" style="width: 100%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Status -->
+    <section class="services-status">
+      <div class="container">
+        <h2 class="section-title">Статус сервисов</h2>
+        
+        <div class="services-grid">
+          <div class="service-item">
+            <span class="status-dot operational"></span>
+            <span class="service-name">Telegram Bot</span>
+            <span class="service-status">Работает</span>
+          </div>
+          <div class="service-item">
+            <span class="status-dot operational"></span>
+            <span class="service-name">API</span>
+            <span class="service-status">Работает</span>
+          </div>
+          <div class="service-item">
+            <span class="status-dot operational"></span>
+            <span class="service-name">Панель управления</span>
+            <span class="service-status">Работает</span>
+          </div>
+          <div class="service-item">
+            <span class="status-dot operational"></span>
+            <span class="service-name">Биллинг</span>
+            <span class="service-status">Работает</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Uptime History -->
+    <section class="uptime-history">
+      <div class="container">
+        <h2 class="section-title">История за 90 дней</h2>
+        <div class="uptime-bars">
+          <!-- Generate 90 days of uptime bars -->
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day partial" title="99.5% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+          <div class="uptime-day operational" title="100% uptime"></div>
+        </div>
+        <div class="uptime-legend">
+          <span>90 дней назад</span>
+          <span>Сегодня</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <img src="/images/logo.webp" alt="OpsVPN" class="logo-img">
+            <span>OpsVPN<sup class="tm">TM</sup></span>
+          </a>
+          <p>Рабочий VPN сервис для России. Обход блокировок РКН, доступ к заблокированным сайтам и приложениям.</p>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Навигация</h4>
+          <div class="footer-links">
+            <a href="/" class="footer-link">Главная</a>
+            <a href="/about/" class="footer-link">О сервисе</a>
+            <a href="/download/" class="footer-link">Скачать VPN</a>
+            <a href="/locations/" class="footer-link">Локации</a>
+            <a href="/status/" class="footer-link">Статус</a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Загрузка</h4>
+          <div class="footer-links">
+            <a href="https://t.me/opsvpnbot" class="footer-link" target="_blank" rel="noopener">OpsVPN на Windows</a>
+            <a href="https://t.me/opsvpnbot" class="footer-link" target="_blank" rel="noopener">OpsVPN на Mac</a>
+            <a href="https://t.me/opsvpnbot" class="footer-link" target="_blank" rel="noopener">OpsVPN на iPhone</a>
+            <a href="https://t.me/opsvpnbot" class="footer-link" target="_blank" rel="noopener">OpsVPN на Android</a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Соц. сети</h4>
+          <div class="footer-links">
+            <a href="https://t.me/opsvpnbot" class="footer-link" target="_blank" rel="noopener">Telegram Bot</a>
+            <a href="https://t.me/opsvpn" class="footer-link" target="_blank" rel="noopener">Telegram Канал</a>
+            <a href="https://www.youtube.com/@opsvpn" class="footer-link" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.tiktok.com/@opsvpn" class="footer-link" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://www.instagram.com/ops.vpn" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.facebook.com/opsvpn" class="footer-link" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.threads.com/@ops.vpn" class="footer-link" target="_blank" rel="noopener">Threads</a>
+            <a href="https://x.com/ops.vpn" class="footer-link" target="_blank" rel="noopener">X (Twitter)</a>
+            <a href="https://github.com/opsvpn" class="footer-link" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.reddit.com/r/opsvpn/" class="footer-link" target="_blank" rel="noopener">Reddit</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-legal">
+          <a href="/terms/">Условия использования</a>
+          <a href="/privacy/">Политика конфиденциальности</a>
+          <a href="/offer/">Публичная оферта</a>
+          <a href="/refund/">Возврат средств</a>
+        </div>
+        <span>&copy; 2026 OpsVPN. Все права защищены.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

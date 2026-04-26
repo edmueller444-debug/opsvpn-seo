@@ -1,0 +1,7 @@
+# OpsVPN robots.txt
+# ВАЖНО: При смене домена обновить Sitemap URL
+
+User-agent: *
+Allow: /
+
+Sitemap: https://opsvpn.top/sitemap.xml
