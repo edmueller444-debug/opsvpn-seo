@@ -4,4 +4,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://opsvpn.top/sitemap.xml
+Sitemap: https://free.opsvpn.top/sitemap.xml
